@@ -1,0 +1,10 @@
+@import '@mintlify/components';
+@import 'base.css';
+
+/*! purgecss start ignore */
+@import 'prism.css';
+@import 'bar-of-progress.css';
+/*! purgecss end ignore */
+
+@import 'components.css';
+@import 'utilities.css';

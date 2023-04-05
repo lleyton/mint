@@ -1,0 +1,65 @@
+{
+  "name": "@mintlify/scraping",
+  "version": "3.0.1",
+  "description": "Scrape documentation frameworks to Mintlify docs",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "Mintlify, Inc.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mintlify/mint",
+    "directory": "packages/mintlify-scraping"
+  },
+  "bugs": {
+    "url": "https://github.com/mintlify/mint/issues"
+  },
+  "license": "Elastic-2.0",
+  "keywords": [
+    "mintlify",
+    "mint",
+    "scraping"
+  ],
+  "type": "module",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "exports": "./bin/index.js",
+  "bin": {
+    "mintlify-scrape": "bin/index.js"
+  },
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "lint": "eslint . --cache"
+  },
+  "dependencies": {
+    "axios": "^1.2.2",
+    "cheerio": "^0.22.0",
+    "favicons": "^7.0.1",
+    "node-html-markdown": "^1.3.0",
+    "ora": "^6.1.2",
+    "puppeteer": "^19.4.0",
+    "shelljs": "^0.8.5",
+    "yargs": "^17.6.0"
+  },
+  "devDependencies": {
+    "@mintlify/eslint-config": "1.0.3",
+    "@mintlify/eslint-config-typescript": "1.0.7",
+    "@mintlify/ts-config": "1.0.7",
+    "@tsconfig/recommended": "1.x",
+    "@types/cheerio": "^0.22.31",
+    "@types/node": "^18.7.13",
+    "@types/shelljs": "^0.8.11",
+    "@types/yargs": "^17.0.13",
+    "@typescript-eslint/eslint-plugin": "5.x",
+    "@typescript-eslint/parser": "5.x",
+    "eslint": "8.x",
+    "eslint-config-prettier": "8.x",
+    "eslint-plugin-unused-imports": "2.x",
+    "prettier": "2.x",
+    "typescript": "^4.8.2"
+  }
+}

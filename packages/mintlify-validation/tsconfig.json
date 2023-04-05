@@ -1,0 +1,8 @@
+{
+  "extends": "@mintlify/ts-config",
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "declaration": true
+  },
+  "include": ["src/**/*.ts"]
+}

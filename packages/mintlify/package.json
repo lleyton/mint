@@ -1,0 +1,35 @@
+{
+  "name": "mintlify",
+  "version": "3.0.7",
+  "description": "Alias for @mintlify/cli",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "Mintlify, Inc.",
+  "homepage": "https://github.com/mintlify/mint/tree/main/packages/mintlify-cli",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mintlify/mint",
+    "directory": "packages/mintlify"
+  },
+  "bugs": {
+    "url": "https://github.com/mintlify/mint/issues"
+  },
+  "license": "Elastic-2.0",
+  "keywords": [
+    "mintlify",
+    "mint",
+    "cli"
+  ],
+  "type": "module",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "bin": {
+    "mintlify": "index.js"
+  },
+  "dependencies": {
+    "@mintlify/cli": "3.0.7"
+  }
+}

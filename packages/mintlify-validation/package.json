@@ -1,0 +1,69 @@
+{
+  "name": "@mintlify/validation",
+  "version": "0.1.9",
+  "description": "Validates mint.json files",
+  "author": "Mintlify, Inc.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mintlify/mint",
+    "directory": "packages/mintlify-validation"
+  },
+  "bugs": {
+    "url": "https://github.com/mintlify/mint/issues"
+  },
+  "license": "Elastic-2.0",
+  "keywords": [
+    "mintlify",
+    "mint",
+    "validation"
+  ],
+  "type": "commonjs",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "jest": {
+    "verbose": true,
+    "moduleNameMapper": {
+      "@/utils/(.*)": "<rootDir>/src/utils/$1",
+      "@/schemas/(.*)": "<rootDir>/src/schemas/$1",
+      "@/types/(.*)": "<rootDir>/src/types/$1"
+    }
+  },
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "webpack",
+    "test": "jest",
+    "lint": "eslint . --cache"
+  },
+  "dependencies": {
+    "zod": "^3.20.6",
+    "zod-to-json-schema": "^3.20.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-typescript": "^7.18.6",
+    "@mintlify/eslint-config": "1.0.3",
+    "@mintlify/eslint-config-typescript": "1.0.7",
+    "@mintlify/ts-config": "1.0.7",
+    "@tsconfig/recommended": "1.x",
+    "@typescript-eslint/eslint-plugin": "5.x",
+    "@typescript-eslint/parser": "5.x",
+    "babel-jest": "^29.3.1",
+    "eslint": "8.x",
+    "eslint-config-prettier": "8.x",
+    "eslint-plugin-unused-imports": "2.x",
+    "jest": "^29.3.1",
+    "prettier": "2.x",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.8.2",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}

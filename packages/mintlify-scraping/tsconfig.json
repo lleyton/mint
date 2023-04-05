@@ -1,0 +1,19 @@
+{
+  // "extends": "@mintlify/ts-config",
+  "compilerOptions": {
+    "module": "ES2020",
+    "moduleResolution": "node",
+    "target": "es2020",
+    "lib": ["es2020", "dom", "ES2021.String"],
+    "sourceMap": true,
+    "outDir": "bin",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["node_modules/*", "src/types/*"]
+    },
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true
+  },
+  "include": ["src/**/*.ts"]
+}

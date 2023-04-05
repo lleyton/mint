@@ -1,0 +1,68 @@
+{
+  "name": "@mintlify/link-rot",
+  "version": "3.0.0",
+  "description": "Static checking for broken internal links",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "Mintlify, Inc.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mintlify/mint",
+    "directory": "packages/mintlify-link-rot"
+  },
+  "bugs": {
+    "url": "https://github.com/mintlify/mint/issues"
+  },
+  "license": "Elastic-2.0",
+  "keywords": [
+    "mintlify",
+    "mint",
+    "link",
+    "rot"
+  ],
+  "type": "module",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "lint": "eslint . --cache"
+  },
+  "dependencies": {
+    "@mintlify/prebuild": "^1.0.0",
+    "chalk": "^5.1.0",
+    "fs-extra": "^11.1.0",
+    "is-absolute-url": "^4.0.1",
+    "remark": "^14.0.2",
+    "remark-frontmatter": "^4.0.1",
+    "remark-gfm": "^3.0.1",
+    "remark-mdx": "^2.2.1",
+    "unist-util-visit": "^4.1.1"
+  },
+  "devDependencies": {
+    "@mintlify/eslint-config": "1.0.3",
+    "@mintlify/eslint-config-typescript": "1.0.7",
+    "@mintlify/ts-config": "1.0.7",
+    "@tsconfig/recommended": "1.x",
+    "@types/fs-extra": "^9.0.13",
+    "@types/mdast": "^3.0.10",
+    "@types/node": "^18.7.13",
+    "@typescript-eslint/eslint-plugin": "5.x",
+    "@typescript-eslint/parser": "5.x",
+    "eslint": "8.x",
+    "eslint-config-prettier": "8.x",
+    "eslint-plugin-unused-imports": "2.x",
+    "mdast-util-mdx-jsx": "^2.1.2",
+    "prettier": "2.x",
+    "typescript": "^4.8.2"
+  }
+}
