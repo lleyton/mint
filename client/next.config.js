@@ -1,10 +1,13 @@
 import BundleAnalyzer from '@next/bundle-analyzer';
+import withExportImages from 'next-export-optimize-images';
 
 const withBundleAnalyzer = BundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
-export default withBundleAnalyzer({
+const plugins = [withBundleAnalyzer, ...(process.env.EXPORT_IMAGES ? [withExportImages] : [])];
+
+export default plugins.reduce((acc, plugin) => plugin(acc), {
   swcMinify: true,
   optimizeFonts: false, // Required so Next Font works on Vercel
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],

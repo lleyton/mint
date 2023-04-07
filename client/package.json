@@ -140,6 +140,7 @@
     "jest-environment-jsdom": "^29.2.2",
     "lint-staged": "^13.1.1",
     "mdast": "^3.0.0",
+    "next-export-optimize-images": "^2.0.1",
     "next-remote-watch": "^2.0.0",
     "prettier": "2.x",
     "refractor": "^4.8.0",
