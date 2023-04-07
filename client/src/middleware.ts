@@ -5,7 +5,11 @@ export default function middleware(req: NextRequest) {
   const { pathname } = url;
 
   // Skip folders built into NextJS
-  const shouldNotApplyMiddleware = pathname.startsWith('/api/') || pathname.startsWith('/_next/');
+  const shouldNotApplyMiddleware =
+    !process.env.IS_MULTI_TENANT ||
+    process.env.IS_MULTI_TENANT === 'false' ||
+    pathname.startsWith('/api/') ||
+    pathname.startsWith('/_next/');
   if (shouldNotApplyMiddleware) {
     return;
   }
