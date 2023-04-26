@@ -18,6 +18,7 @@ export function getAnalyticsConfig(config: Config) {
 // Note: It's really bad we have to do this because the data we were sending was not clean.
 // We added this as a sanity check to ensure analytics work as expected.
 // We should investigate improving our mongoose schemas to make this unnecessary.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const constructAnalytics = (analytics: any): AnalyticsMediatorConstructorInterface => {
   const properlyTypedAnalytics: AnalyticsMediatorConstructorInterface = {};
   if (analytics?.amplitude?.apiKey) {
@@ -53,7 +54,10 @@ const constructAnalytics = (analytics: any): AnalyticsMediatorConstructorInterfa
     properlyTypedAnalytics.pirsch = { id: analytics.pirsch.id };
   }
   if (analytics?.plausible?.domain) {
-    properlyTypedAnalytics.plausible = { domain: analytics.plausible.domain };
+    properlyTypedAnalytics.plausible = {
+      domain: analytics.plausible.domain,
+      script: analytics.plausible.script,
+    };
   }
   if (analytics?.posthog?.apiKey) {
     properlyTypedAnalytics.posthog = {
