@@ -9,7 +9,7 @@ export default function PlausibleScript({ plausible }: { plausible?: PlausibleCo
     <Script
       strategy="afterInteractive"
       data-domain={plausible.domain}
-      src="https://plausible.io/js/script.js"
+      src={plausible.script ?? 'https://plausible.io/js/script.js'}
     />
   );
 }

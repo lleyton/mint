@@ -47,6 +47,7 @@ type PostHogConfigInterface = {
 
 type PlausibleConfigInterface = {
   domain?: string;
+  script?: string;
 };
 
 type SegmentConfigInterface = {
